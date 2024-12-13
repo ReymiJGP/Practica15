@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+<meta charset="UTF-8">
+<title>CiTIM Grupo XB</title>
+<link rel="stylesheet" href="css/css/problemaStem.css"/>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<script>
+    function calcula_() {
+        // Datos del problema
+        const masaSol = 332946 * 5.97e24; // Masa del Sol en kg (332946 veces la masa de la Tierra)
+        const distanciaSolTierra = 1.5e11; // Distancia entre el Sol y la Tierra en metros
+        const G = 6.67430e-11; // Constante gravitacional en N·m²/kg²
+
+        // Variables a resolver
+        let r2 = 0; // Distancia del cuerpo al Sol
+        let r1 = distanciaSolTierra; // Distancia del cuerpo a la Tierra
+
+        // Calcular r2 utilizando la fórmula de equilibrio de fuerzas gravitacionales
+        r2 = Math.sqrt(masaSol / (masaSol + 5.97e24)) * distanciaSolTierra;
+
+        // Mostrar el resultado
+        const resultadoDiv = document.getElementById("resultadoA");
+        resultadoDiv.innerHTML = "La distancia de equilibrio es: " + r2.toFixed(2) + " metros.";
+    }
+</script>
+</head>
+<body>
+<section class="wrapper">
+<header>
+<h1 class="logo">Estudiante: Reymi Jesús, No. de Control: C22680979</h1>
+</header>
+<section id="contenedor">
+<section class="problema">
+<h2>Problema: Fuerzas en equilibrio</h2>
+<p>Descripción:</p>
+<p>¿A qué distancia de la Tierra debe estar un cuerpo para que sienta un equilibrio entre las fuerzas gravitacionales que ejercen sobre él el Sol y la Tierra? La distancia media del Sol a la Tierra es de 1.5 x 10E8 Km y la masa del Sol es 332 946 masas terrestres.</p>
+</section>
+<section class="esquemaProblema">
+<h2>Esquema</h2>
+<center>
+<img class="imgProblema" src="images/Problema.jpg">
+</center>
+</section>
+<section class="formulas">
+<h2>Fórmulas</h2>
+<p> F1 = F2 </p>
+<p> G(mM/r2) = G(mM/r(2/2)) </p>
+<p> (M/r2) = (M/r(2/2)) </p>
+</section>
+<section class="datos">
+<h2>Datos:</h2>
+<ul>
+    <li> Dt - s = 1.5E8 Km </li>
+    <li> Ms = 332946 * Mt </li>
+</ul>
+</section>
+<section class="calculos">
+<h2>Solución</h2>
+<button onclick="calcula_();">Presiona para calcular</button>
+</section>
+<section class="resultado">
+<h2>Resultado:</h2>
+<div id="resultadoA"></div>
+</section>
+</section>
+<footer class="pie">
+Creative Commons versión 3.0 SciSoft 2024
+</footer>
+</section>
+</body>
+</html>
+
